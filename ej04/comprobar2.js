@@ -22,6 +22,7 @@ function grupoIdade() {
             grupo = 'A idade ten que ser entre 0 e 100';
     }
 
+    
     document.getElementById('teuGrupo').innerText = grupo;
     return false;
 }
