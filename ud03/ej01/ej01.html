@@ -38,6 +38,26 @@
             alert("[ERROR]: La ventana no está abierta");
         }
         }
+
+        //////////
+        //Mover ventana moveBy
+        function moverBy() {
+        if (ventanaEmergente && !ventanaEmergente.closed) {
+            ventanaEmergente.moveBy(50, 50);
+        } else {
+            alert("[ERROR]: La ventana no está abierta");
+        }
+        }
+        //////////
+        //Mover ventana moveTo 
+        function moverTo() {
+        if (ventanaEmergente && !ventanaEmergente.closed) {
+            ventanaEmergente.moveTo(500, 500);
+        } else {
+            alert("[ERROR]: La ventana no está abierta");
+        }
+        }
+
         //////////
         //Comprobar que navegador se está usando
         function getNavegador() {
@@ -67,5 +87,7 @@
         <h1>Ejercicio ventanas</h1>
         <button onclick="abrirVentana()">Abrir Ventana</button>
         <button onclick="cerrarVentana()">Cerrar Ventana</button>
+        <button onclick="moverBy()">moverBy</button>
+        <button onclick="moverTo()">moverTo</button>
     </body>
 </html>
