@@ -19,7 +19,7 @@ for (let ano = anoActual; ano <= 2100; ano++) {
   let diaSemana = cumple.getDay();
 
   if (diaSemana === 0 || diaSemana === 6) {
-    //console.log("En " + ano + " el cumple es en fin de semana.");
+    console.log("En " + ano + " el cumple es en fin de semana.");
   }
 }
 
@@ -41,3 +41,27 @@ function formatoFecha(dataString, formato) {
 console.log(formatoFecha(fechaActual, 1));
 console.log(formatoFecha(fechaActual, 2));
 console.log(formatoFecha(fechaActual, 3));
+
+
+//3.Amosa a hora actual en diferentes formatos segundo o valor que meta o usuario por parámetro (usa un switch):
+
+function formatearHora(formato) {
+  //let fechaActual = new Date();   <-declarada en el ej1.
+
+  let horas = fechaActual.getHours();
+  let minutos = fechaActual.getMinutes();
+  let segundos = fechaActual.getSeconds();
+  let ampm = horas >= 12 ? 'PM' : 'AM';
+
+  switch (formato) {
+      case 1:
+          //Digital 'normal'
+          return `${horas}:${minutos}:${segundos}`;
+      case 2:
+          //Con PM/AM
+          horas = horas % 12 || 12;
+          return `${horas}:${minutos} ${ampm}`;
+  }
+}
+console.log(formatearHora(1));
+console.log(formatearHora(2));
