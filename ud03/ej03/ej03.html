@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Procesar Nombre y Apellidos</title>
+    <script>
+        function procesarNomApe() {
+            //Datos desde o form
+            let nombreApellidos = document.getElementById("nombreApellidos").value;
+
+            // Mostrar resultados en el cuerpo del HTML
+            document.write(nombreApellidos);
+        }
+    </script>
+</head>
+<body>
+
+<form id="Formulario">
+    <label for="nombreApellidos">Nombre y Apellidos:</label>
+    <input type="text" id="nombreApellidos" name="nombreApellidos" required>
+
+    <button type="button" onclick="procesarNomApe()">Enviar</button>
+</form>
+</body>
+</html>
