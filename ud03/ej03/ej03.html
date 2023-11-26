@@ -28,7 +28,10 @@
             //5.Que amose separado Nome, Apelido1 e Apelido2. (separamos apellidos)
             let apellido1 = trozosNomApe[1] || "";
             let apellido2 = trozosNomApe.slice(2).join(" ");
-            
+
+            //6.Unha proposta de nome de usuario co nome en minúsculas, a incial do primeiro apelido en maiúsculas e a inicial do segundo apelido tamén en maiúsculas. Por exemplo, para Gerardo Otero Rodriguez: gerardoOR
+             let nombreUsuarioPropuesto = nombreMinusculas + (apellidos.length > 0 ? apellidos.split(" ").map(function (apellido) { return apellido.charAt(0).toUpperCase(); }).join("") : "");
+           
             // Mostrar resultados en el cuerpo del HTML
             document.write("<h2>Resultado Procesado Información:</h2>");
             document.write("<p>O tamaño do nome: " + tamanoNombre + "</p>");
@@ -39,6 +42,7 @@
             document.write("<p>O nome en maiúsculas: " + nombreMayusculas + "</p>");
             document.write("<p>Os apelidos en maiúsculas: " + apellidosMayusculas + "</p>");
             document.write("<p>Que amose separado Nome, Apelido1 e Apelido2:: Nombre: " + nombre + ", Apellido1: " + apellido1 + " e Apellido2: " + apellido2 +"</p>");
+            document.write("<p>Proposta de nome de usuario: " + nombreUsuarioPropuesto + "</p>");
         }
     </script>
 </head>
