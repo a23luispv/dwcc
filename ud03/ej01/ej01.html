@@ -18,8 +18,8 @@
                 <p>URL: ${window.location.href}</p>
                 <p>Protocolo: ${window.location.protocol}</p>
                 <p>Navegador: ${getNavegador()}</p>
-                <p>Java está dispoñible: </p>
-                `;
+                <p>Java está dispoñible: ${comprobarJava()}</p>
+                `
         
                 //Añadimos el contenido a la ventana y acemos que se posicione en frente
                 ventanaEmergente.document.write(contenidoVentana);
@@ -53,6 +53,11 @@
             } else {
                 return "Navegador Descoñecido";
             }
+        }
+        //////////
+        //Verifica si Java está disponible
+        function comprobarJava() {
+            return navigator.javaEnabled() ? "Sí" : "Non";
         }
 
 
