@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validación de Contraseña</title>
+    <script>
+        function validarContrasena(contrasena) {
+            //1.Entre 8 e 16 caracteres.
+            if (contrasena.length < 8 || contrasena.length > 16) {
+                return false;
+            }
+
+            //2.Algunha maiúscula
+            if (!/[A-Z]/.test(contrasena)) {
+                return false;
+            }
+
+            //3.Algunha minúscula
+            if (!/[a-z]/.test(contrasena)) {
+                return false;
+            }
+
+            //4.Algún número
+            if (!/\d/.test(contrasena)) {
+                return false;
+            }
+
+            //5.Algún caracter especial
+            if (!/[_\-@#$%&]/.test(contrasena)) {
+                return false;
+            }
+
+            //Si se cumple OK:
+            return true;
+        }
+
+        //Valor desde el prompt
+        let contrasena = prompt("Introduce tu contraseña:");
+
+        if (validarContrasena(contrasena)) {
+            alert("La contraseña es válida.");
+        } else {
+            alert("La contraseña no cumple con los requisitos.");
+        }
+    </script>
+</head>
+</html>
