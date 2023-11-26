@@ -6,9 +6,19 @@
         function procesarNomApe() {
             //Datos desde o form
             let nombreApellidos = document.getElementById("nombreApellidos").value;
+            //Separar nombre y apellidos
+            let trozosNomApe = nombreApellidos.split(" ");
+            let nombre = trozosNomApe[0] || "";
+            let apellidos = trozosNomApe.slice(1).join(" ");
+    
+            //1.O tamaño do nome e dos apelidos.
+            let tamanoNombre = nombre.length;
+            let tamanoApellidos = apellidos.length;
 
             // Mostrar resultados en el cuerpo del HTML
-            document.write(nombreApellidos);
+            document.write("<h2>Resultado Procesado Información:</h2>");
+            document.write("<p>O tamaño do nome: " + tamanoNombre + "</p>");
+            document.write("<p>O tamaño dos apelidos: " + tamanoApellidos + "</p>");
         }
     </script>
 </head>
