@@ -19,6 +19,25 @@ for (let ano = anoActual; ano <= 2100; ano++) {
   let diaSemana = cumple.getDay();
 
   if (diaSemana === 0 || diaSemana === 6) {
-    console.log("En " + ano + " el cumple es en fin de semana.");
+    //console.log("En " + ano + " el cumple es en fin de semana.");
   }
 }
+
+//3.Amosa a data actual en diferentes formatos segundo o valor que meta o usuario por parámetro (usa un switch)
+function formatoFecha(dataString, formato) {
+  let fecha = new Date(dataString);
+
+  switch (formato) {
+      case 1:
+          return fecha.toLocaleDateString('en-US');
+      case 2:
+          return fecha.toLocaleDateString('es-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+      case 3:
+          return fecha.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+  }
+}
+
+//let fechaActual = new Date();   <-declarada en el ej1.
+console.log(formatoFecha(fechaActual, 1));
+console.log(formatoFecha(fechaActual, 2));
+console.log(formatoFecha(fechaActual, 3));
