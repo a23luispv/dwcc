@@ -15,10 +15,14 @@
             let tamanoNombre = nombre.length;
             let tamanoApellidos = apellidos.length;
 
+            //2.O tamaño do nome e dos apelidos sen espazos.
+            let tamanoSinEspacios = nombre.replace(/\s/g, "").length + apellidos.replace(/\s/g, "").length;
+
             // Mostrar resultados en el cuerpo del HTML
             document.write("<h2>Resultado Procesado Información:</h2>");
             document.write("<p>O tamaño do nome: " + tamanoNombre + "</p>");
             document.write("<p>O tamaño dos apelidos: " + tamanoApellidos + "</p>");
+            document.write("<p>O tamaño do nome e dos apelidos sen espazos: " + tamanoSinEspacios + "</p>");
         }
     </script>
 </head>
