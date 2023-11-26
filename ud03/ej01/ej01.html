@@ -44,6 +44,7 @@
         function moverBy() {
         if (ventanaEmergente && !ventanaEmergente.closed) {
             ventanaEmergente.moveBy(50, 50);
+            ventanaEmergente.focus();
         } else {
             alert("[ERROR]: La ventana no está abierta");
         }
@@ -53,9 +54,36 @@
         function moverTo() {
         if (ventanaEmergente && !ventanaEmergente.closed) {
             ventanaEmergente.moveTo(500, 500);
+            ventanaEmergente.focus();
         } else {
             alert("[ERROR]: La ventana no está abierta");
         }
+        }
+
+
+
+        //////////
+        //Redimensionar ventana
+        function redimensionarVentana() {
+            if (ventanaEmergente && !ventanaEmergente.closed) {
+                ventanaEmergente.resizeTo(500, 500);
+                ventanaEmergente.focus();
+            } else {
+                alert("[ERROR]: La ventana no está abierta");
+            }
+        }
+        //////////
+        //
+        function aumetarVentana() {
+            if (ventanaEmergente && !ventanaEmergente.closed) {
+                const nuevaAltura = ventanaEmergente.innerHeight + 50;
+                const nuevaAnchura = ventanaEmergente.innerWidth + 50;
+                
+                ventanaEmergente.resizeBy(nuevaAnchura, nuevaAltura);
+                ventanaEmergente.focus();
+            } else {
+                alert("[ERROR]: La ventana no está abierta");
+            }
         }
 
         //////////
@@ -89,5 +117,7 @@
         <button onclick="cerrarVentana()">Cerrar Ventana</button>
         <button onclick="moverBy()">moverBy</button>
         <button onclick="moverTo()">moverTo</button>
+        <button onclick="redimensionarVentana()">Redimensionar Ventana</button>
+        <button onclick="aumetarVentana()">Aumetar Ventana</button>
     </body>
 </html>
