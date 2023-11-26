@@ -18,11 +18,22 @@
             //2.O tamaño do nome e dos apelidos sen espazos.
             let tamanoSinEspacios = nombre.replace(/\s/g, "").length + apellidos.replace(/\s/g, "").length;
 
+            //3.O nome e os apelidos en minúsculas.
+            let nombreMinusculas = nombre.toLowerCase();
+            let apellidosMinusculas = apellidos.toLowerCase();
+            //4.E en maiúsculas.
+            let nombreMayusculas = nombre.toUpperCase();
+            let apellidosMayusculas = apellidos.toUpperCase();
+            
             // Mostrar resultados en el cuerpo del HTML
             document.write("<h2>Resultado Procesado Información:</h2>");
             document.write("<p>O tamaño do nome: " + tamanoNombre + "</p>");
             document.write("<p>O tamaño dos apelidos: " + tamanoApellidos + "</p>");
             document.write("<p>O tamaño do nome e dos apelidos sen espazos: " + tamanoSinEspacios + "</p>");
+            document.write("<p>O nome en minúsculas: " + nombreMinusculas + "</p>");
+            document.write("<p>Os apelidos en minúsculas: " + apellidosMinusculas + "</p>");
+            document.write("<p>O nome en maiúsculas: " + nombreMayusculas + "</p>");
+            document.write("<p>Os apelidos en maiúsculas: " + apellidosMayusculas + "</p>");
         }
     </script>
 </head>
