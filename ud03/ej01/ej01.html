@@ -7,7 +7,7 @@
         let ventanaEmergente;
         function abrirVentana() {
             //Pedir confirmación para abrir ventana
-            if (window.confirm("[AVISO]: ¿Permitir abrir la ventana emergenteee?")) {
+            if (window.confirm("[AVISO]: ¿Permitir abrir la ventana emergente?")) {
             //Abrir ventana
             ventanaEmergente = window.open('', '_blank', 'width=300,height=300,toolbar=no,menubar=no,top=400,left=400');
             
@@ -29,10 +29,20 @@
             }
             }
         }
+        //////////
+        //Cerrar ventana
+        function cerrarVentana() {
+        if (ventanaEmergente && !ventanaEmergente.closed) {
+            ventanaEmergente.close();
+        } else {
+            alert("[ERROR]: La ventana no está abierta");
+        }
+        }
     </script>
     </head>
     <body>
         <h1>Ejercicio ventanas</h1>
         <button onclick="abrirVentana()">Abrir Ventana</button>
+        <button onclick="cerrarVentana()">Cerrar Ventana</button>
     </body>
 </html>
