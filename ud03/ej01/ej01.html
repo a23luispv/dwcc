@@ -17,7 +17,7 @@
                 <h3>Exemplo de Ventá nova</h3>
                 <p>URL: ${window.location.href}</p>
                 <p>Protocolo: ${window.location.protocol}</p>
-                <p>Navegador: </p>
+                <p>Navegador: ${getNavegador()}</p>
                 <p>Java está dispoñible: </p>
                 `;
         
@@ -38,6 +38,24 @@
             alert("[ERROR]: La ventana no está abierta");
         }
         }
+        //////////
+        //Comprobar que navegador se está usando
+        function getNavegador() {
+            const navegador = window.navigator.userAgent;
+            if (navegador.includes("Chrome")) {
+                return "Google Chrome";
+            } else if (navegador.includes("Firefox")) {
+                return "Mozilla Firefox";
+            } else if (navegador.includes("Safari")) {
+                return "Apple Safari";
+            } else if (navegador.includes("Edge")) {
+                return "Microsoft Edge";
+            } else {
+                return "Navegador Descoñecido";
+            }
+        }
+
+
     </script>
     </head>
     <body>
