@@ -44,6 +44,7 @@
         function moverBy() {
         if (ventanaEmergente && !ventanaEmergente.closed) {
             ventanaEmergente.moveBy(50, 50);
+            ventanaEmergente.focus();
         } else {
             alert("[ERROR]: La ventana no está abierta");
         }
@@ -53,6 +54,7 @@
         function moverTo() {
         if (ventanaEmergente && !ventanaEmergente.closed) {
             ventanaEmergente.moveTo(500, 500);
+            ventanaEmergente.focus();
         } else {
             alert("[ERROR]: La ventana no está abierta");
         }
