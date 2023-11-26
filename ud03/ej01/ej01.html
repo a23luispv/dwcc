@@ -1,4 +1,4 @@
-<!DOCTYPE  html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta  http-equiv="content-type"  content="text/html;charset=utf-8">
@@ -6,12 +6,27 @@
     <script>
         let ventanaEmergente;
         function abrirVentana() {
-        //Pedir confirmación para abrir ventana
-        if (window.confirm("[AVISO]: ¿Permitir abrir la ventana emergente?")) {
+            //Pedir confirmación para abrir ventana
+            if (window.confirm("[AVISO]: ¿Permitir abrir la ventana emergenteee?")) {
             //Abrir ventana
             ventanaEmergente = window.open('', '_blank', 'width=300,height=300,toolbar=no,menubar=no,top=400,left=400');
+            
+            if (ventanaEmergente) {
+                const contenidoVentana = 
+                `
+                <h3>Exemplo de Ventá nova</h3>
+                <p>URL: ${window.location.href}</p>
+                <p>Protocolo: ${window.location.protocol}</p>
+                <p>Navegador: </p>
+                <p>Java está dispoñible: </p>
+                `;
+        
+                //Añadimos el contenido a la ventana y acemos que se posicione en frente
+                ventanaEmergente.document.write(contenidoVentana);
+                ventanaEmergente.focus();
             } else {
-            alert("[ERROR]: No se pudo abrir la ventana");
+                alert("[ERROR]: No se pudo abrir la ventana");
+            }
             }
         }
     </script>
