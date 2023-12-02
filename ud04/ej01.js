@@ -18,4 +18,9 @@ console.log("Verificar añadido o comezo : " + paises);
 //5.Engade un país ao final do Array.
 
 paises.push("USA");
-console.log("Verificar añadido o comezo : " + paises);
+console.log("Verificar añadido o final : " + paises);
+
+//6.Elimina un elemento ao comezo do Array e indica cal foi.
+
+eliminadoComezo = paises.shift();
+console.log("Eliminouse o elemento: "+eliminadoComezo);
