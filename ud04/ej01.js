@@ -1,7 +1,14 @@
 let paises = ["España", "Portugal", "Francia", "Irlanda"];
 
-//Amosa o número de elementos do Array
-console.log("Nº paises array: " + paises.length);
+//1.Amosa o número de elementos do Array
+console.log("Nº países array: " + paises.length);
 
-//Amosa todos os países.
-console.log("Todos os paises: " + paises);
+//2.Amosa todos os países.
+console.log("Todos os países: " + paises);
+
+//3.Amosa todos os países en sentido inverso. Ollo, que o Array orixinal non
+//quede modificado, é dicir, que non quede ordenado ao revés.
+
+console.log("Todos os países en sentido inverso:", paises.slice().reverse());
+//console.log("Todos os países: " + paises);
+
