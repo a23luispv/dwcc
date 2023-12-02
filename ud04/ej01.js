@@ -14,3 +14,8 @@ console.log("Todos os países en sentido inverso:", paises.slice().reverse());
 //4.Engade un país ao comezo do Array.
 paises.unshift("UK");
 console.log("Verificar añadido o comezo : " + paises);
+
+//5.Engade un país ao final do Array.
+
+paises.push("USA");
+console.log("Verificar añadido o comezo : " + paises);
