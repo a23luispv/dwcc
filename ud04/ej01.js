@@ -40,3 +40,9 @@ console.log("Elemento en la posición " +posicionUsuario +" : " + paises[posicio
 paisUsuario = "Irlanda";
 posicionPaisUsuario = paises.indexOf(paisUsuario);
 console.log("Posición de " + paisUsuario + " : " + posicionPaisUsuario);
+
+//10.Amosa os elementos que se atopan entre dúas posicións indicadas polo usuario.
+
+posicioninicio = 0;
+posicionfin = 2;
+console.log("Elementos entre las posiciones", posicioninicio, "y", posicionfin, ":", paises.slice(posicioninicio, posicionfin + 1));
