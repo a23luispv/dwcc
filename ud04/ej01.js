@@ -24,3 +24,8 @@ console.log("Verificar añadido o final : " + paises);
 
 eliminadoComezo = paises.shift();
 console.log("Eliminouse o elemento: "+eliminadoComezo);
+
+//7.Elimina un elemento ao final do Array e indica cal foi
+
+eliminadoFinal =paises.pop();
+console.log("Eliminouse o elemento: "+eliminadoFinal);
