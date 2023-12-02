@@ -29,3 +29,9 @@ console.log("Eliminouse o elemento: "+eliminadoComezo);
 
 eliminadoFinal =paises.pop();
 console.log("Eliminouse o elemento: "+eliminadoFinal);
+
+//8.Amosa o elemento que se atope na posición que che indique o usuario
+
+posicionUsuario = 2;
+console.log("Elemento en la posición " +posicionUsuario +" : " + paises[posicionUsuario]);
+
