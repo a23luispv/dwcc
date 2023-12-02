@@ -1,48 +1,85 @@
 let paises = ["España", "Portugal", "Francia", "Irlanda"];
 
 //1.Amosa o número de elementos do Array
-console.log("Nº países array: " + paises.length);
+
+function arrLength(array){
+    return array.length;
+}
+
+console.log("Nº países array: " + arrLength(paises));
 
 //2.Amosa todos os países.
-console.log("Todos os países: " + paises);
+
+function pintarArray(array){
+    return console.log("Todos os países: " + array);
+}
+pintarArray(paises);
 
 //3.Amosa todos os países en sentido inverso. Ollo, que o Array orixinal non
 //quede modificado, é dicir, que non quede ordenado ao revés.
-console.log("Todos os países en sentido inverso:", paises.slice().reverse());
+
+function inversoArray(array) {
+    return array.slice().reverse();
+}
+console.log("Todos os países en sentido inverso:", inversoArray(paises));
 //console.log("Todos os países: " + paises);
 
 //4.Engade un país ao comezo do Array.
-paises.unshift("UK");
+
+function addPais(pais){
+    paises.unshift(pais);
+}
+addPais("UK");
 console.log("Verificar añadido o comezo : " + paises);
 
 //5.Engade un país ao final do Array.
 
-paises.push("USA");
+function addPaisAlFinal(pais){
+    paises.push(pais);
+}
+addPaisAlFinal("USA")
 console.log("Verificar añadido o final : " + paises);
 
 //6.Elimina un elemento ao comezo do Array e indica cal foi.
 
-eliminadoComezo = paises.shift();
+function deleteComezo(){
+    paises.shift();
+}
+eliminadoComezo = paises[0];
+deleteComezo();
 console.log("Eliminouse o elemento: "+eliminadoComezo);
 
 //7.Elimina un elemento ao final do Array e indica cal foi
 
-eliminadoFinal =paises.pop();
+function deleteFinal(){
+    paises.pop();
+}
+eliminadoFinal = paises[paises.length - 1];
+deleteFinal();
 console.log("Eliminouse o elemento: "+eliminadoFinal);
 
 //8.Amosa o elemento que se atope na posición que che indique o usuario
 
+function paisUsuario(posicionUsuario){
+    return paises[posicionUsuario];
+}
 posicionUsuario = 2;
-console.log("Elemento en la posición " +posicionUsuario +" : " + paises[posicionUsuario]);
+console.log("Elemento en la posición " +posicionUsuario +" : " + paisUsuario(posicionUsuario));
 
 //9.Amosa a posición na que se atopa un elemento indicado polo usuario
 
+function posicionPaisUsuario(paisUsuario){
+    return paises.indexOf(paisUsuario);;
+}
 paisUsuario = "Irlanda";
-posicionPaisUsuario = paises.indexOf(paisUsuario);
-console.log("Posición de " + paisUsuario + " : " + posicionPaisUsuario);
+console.log("Posición de " + paisUsuario + " : " + posicionPaisUsuario(paisUsuario));
 
 //10.Amosa os elementos que se atopan entre dúas posicións indicadas polo usuario.
 
+function paisesSlice(inicio,fin){
+    return paises.slice(inicio, fin + 1);
+}
 posicioninicio = 0;
 posicionfin = 2;
-console.log("Elementos entre las posiciones", posicioninicio, "y", posicionfin, ":", paises.slice(posicioninicio, posicionfin + 1));
+
+console.log("Elementos entre las posiciones " + posicioninicio + " y " + posicionfin + " : " + paisesSlice(posicioninicio,posicionfin));
