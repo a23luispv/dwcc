@@ -35,3 +35,8 @@ console.log("Eliminouse o elemento: "+eliminadoFinal);
 posicionUsuario = 2;
 console.log("Elemento en la posición " +posicionUsuario +" : " + paises[posicionUsuario]);
 
+//9.Amosa a posición na que se atopa un elemento indicado polo usuario
+
+paisUsuario = "Irlanda";
+posicionPaisUsuario = paises.indexOf(paisUsuario);
+console.log("Posición de " + paisUsuario + " : " + posicionPaisUsuario);
